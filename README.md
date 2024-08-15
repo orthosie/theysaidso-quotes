@@ -41,6 +41,9 @@ print $quotes[0]['quote'] ."\n";
 ```
 
 ## Full Options on search
+
+Here are the full options on search API.
+
 ```
 use TheySaidSo\Quotes;
 
@@ -55,4 +58,18 @@ $quotes = Quotes::withCredential(<api-key>)
                  ->get();
 print "A quote by " .  $quotes[0]['author'] . " on design\n";
 print $quotes[0]['quote'] ."\n";
+```
+
+## Rate Limit Numbers
+
+After you make a call to the server you can get the rate limit numbers from the client library.
+
+```
+use TheySaidSo\Quotes;
+
+$theysaidso = Quotes::withCredential(<api-key>);
+$quotes =  $theysaidso->random()->limit(1)->get();
+
+print "Total limit for this period " . $theysaidso->totalLimit() . "\n";
+print "Limit remaining " . $theysaidso->limitRemaining() . "\n";
 ```

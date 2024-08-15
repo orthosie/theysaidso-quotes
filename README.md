@@ -24,7 +24,7 @@ Get a random quote
 ```
 use TheySaidSo\Quotes;
 
-$quotes = Quotes::withCredential(<api-key>)->random()->limit(1)->get()
+$quotes = Quotes::withCredential(<api-key>)->random()->limit(1)->get();
 print "A quote by " .  $quotes[0]['author'] . "\n";
 print $quotes[0]['quote'] ."\n";
 ```

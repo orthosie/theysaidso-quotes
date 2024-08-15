@@ -1,0 +1,25 @@
+{
+    "name": "orthosie/theysaidso-quotes",
+    "description": "A fluent PHP client for world famous They Said So quotes platform.",
+    "authors": [
+        {
+            "name": "Orthosie",
+            "homepage": "https://orthosie.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "php-coveralls/php-coveralls": "^2.6"
+    },
+    "autoload":{
+    	"psr-4": {"TheySaidSo\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": { "TheySaidSo\\Tests\\": "tests/" }
+    }
+}
